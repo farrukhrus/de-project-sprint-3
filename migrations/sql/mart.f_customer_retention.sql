@@ -1,3 +1,5 @@
+delete from mart.f_customer_retention where period_id = DATE_PART('week', '{{ds}}}'::DATE);
+
 insert into mart.f_customer_retention (
 	period_name,period_id,item_id,new_customers_count,returning_customers_count,
 	refunded_customer_count,new_customers_revenue,returning_customers_revenue,customers_refunded
